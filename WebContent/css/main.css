@@ -1,0 +1,156 @@
+@charset "UTF-8";
+
+body {
+	background-image: url(../img/01.jpg);
+}
+
+#container {
+	width: 1024px;
+	margin: 0 auto;
+}
+
+/* 게임관리 */
+#container>#gameInsert-link {
+	float: right;
+}
+
+#container>#gameInsert-link a {
+	text-decoration: underline;
+	color: lightgray;
+	font-size: 15px;
+}
+
+/* 인기게임, 최신게임, 전체게임 */
+#container>#main-content>.gameList {
+	height: 350px;
+	margin-top: 30px;
+}
+
+#container>#main-content>.gameList h3 {
+	color: white;
+	font-size: 25px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+#container>#main-content>.gameList .item {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#container>#main-content>.gameList .item>li {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+#container>#main-content>.gameList .gameInfo:before {
+	content: "❯";
+}
+
+#container>#main-content>.gameList .gameInfo {
+	font-size: 1.2em;
+	padding-left: 10px;
+	font-weight: bold;
+}
+
+#container>#main-content>.gameList .gameInfo>span {
+	float: right;
+	font-size: 14px;
+	line-height: 1.7;
+	color: lightgray;
+}
+
+#container>#main-content>.gameList .gameInfo:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+#container>#main-content>.gameList img {
+	width: 300px;
+	height: 220px;
+	border-radius: 10px;
+	border: 0.2px solid lightgray;
+	transition: 0.5s;
+	margin-bottom: 10px;
+}
+
+#container>#main-content>.gameList img:hover {
+	width: 320px;
+	height: 240px;
+}
+
+/* 페이지 버튼 */
+#container>#main-content>.page-btn {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+#container>#main-content>.page-btn li {
+	margin: 10px;
+	display: inline;
+}
+
+#container>#main-content>.page-btn a {
+	background: white;
+	color: black;
+	width: 20px;
+	height: 20px;
+	line-height: 1.5;
+	border-radius: 50%;
+	font-weight: bold;
+}
+
+/* 우측사이드바 */
+#container>#side-banner {
+	background: purple;
+	position: relative;
+	width: 1000px;
+}
+
+#container>#side-banner>#ranking-box {
+	width: 180px;
+	top: -1150px;
+	right: -240px;
+	position: absolute;
+	border-radius: 5px;
+	color: lightgray;
+}
+
+#container>#side-banner>#ranking-box h2 {
+	margin: 0 0 10px 10px;
+	font-size: 15px;
+	font-weight: bold;
+	float: left;
+}
+
+#container>#side-banner>#ranking-box a {
+	float: right;
+	font-size: 12px;
+	color: #B97687;
+	margin: 5px 8px 0 0
+}
+
+#container>#side-banner>#ranking-box a:hover {
+	color: #E5BFBC;
+	text-decoration: underline;
+}
+
+#container>#side-banner>#ranking-box img {
+	width: 20px;
+}
+
+#container>#side-banner>#ranking-box table {
+	text-align: center;
+	margin: 0 auto;
+	width: 90%;
+	margin-bottom: 10px;
+}
+
+#container>#side-banner>#ranking-box td, th {
+	border: 1px solid;
+	padding: 10px;
+	font-size: 13px;
+}

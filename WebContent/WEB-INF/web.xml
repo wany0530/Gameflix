@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+	<display-name>jspexp</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<!-- 서버단위 설정값 처리.
+	1. context-param : 서버단위 정보 할당 태그
+	2. description : 파라미터 설정(필수 아님)
+	3. param-name : 매개변수 이름
+	4. param-value : 매개변수의 값.
+	 -->
+	<context-param>
+		<description>로깅 여부</description>
+		<param-name>logEnabled</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<context-param>
+		<description>디버깅 레벨</description>
+		<param-name>debugLevel</param-name>
+		<param-value>5</param-value>
+	</context-param>
+	<context-param>
+		<description>DB 서버</description>
+		<param-name>dbServer</param-name>
+		<param-value>192.212.42.54</param-value>
+	</context-param>
+	<context-param>
+		<description>계정</description>
+		<param-name>account</param-name>
+		<param-value>himan</param-value>
+	</context-param>
+	<context-param>
+		<description>비밀번호</description>
+		<param-name>pass</param-name>
+		<param-value>7777</param-value>
+	</context-param>
+	<context-param>
+		<description>이미지경로</description>
+		<param-name>fileServer</param-name>
+		<param-value>124.243.3.5</param-value>
+	</context-param>
+	<!--
+	# 서버단위 에러처리.
+	1. code/class 단위
+	2. loaction : WebContent를 기준 folder로 하위에 설정
+		할 수 있다.
+	
+	-->
+	<error-page>
+		<error-code>404</error-code>
+		<location>/a04_exception/a01_0202/z03_404.jsp</location>
+	</error-page>
+		<error-page>
+		<exception-type>java.lang.NullPointerException</exception-type>
+		<location>/a04_exception/a01_0202/z05_null_exception.jsp</location>
+	</error-page>
+<!-- 	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/a04_exception/a01_0202/z04_all_exception.jsp</location>
+	</error-page> 
+ -->
+</web-app>

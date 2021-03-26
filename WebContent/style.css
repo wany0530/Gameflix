@@ -1,0 +1,46 @@
+.container2 {
+  display: flex;
+  flex-wrap:wrap;
+
+}
+
+.grid {
+  width: 400px;
+  height: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  background-Color:white;
+}
+
+.grid div {
+  height: 40px;
+  width: 40px;
+}
+
+.tetromino {
+  background-color: blue;
+}
+
+.mini-grid {
+  
+  width: 160px;
+  height: 160px;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mini-grid div {
+  height: 40px;
+  width: 40px;
+}
+#section_size{
+	width:1024px;
+	margin-left:136px;
+	height:860px;
+	background-color:black; 
+}
+body{
+	background-image: url(img/01.jpg);
+}
+

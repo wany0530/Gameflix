@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+.main {
+	width:1024px;
+	margin:0 auto;
+	padding-bottom:40px;
+	background-color:whitesmoke;
+}
+.gtitle {
+	padding:30px;
+	text-align:center;
+	color:#2E2E2E;	
+}
+.game-container {
+	width:800px;
+	height:600px;
+	margin:0 auto;
+	background-image:url("../img/rf-background.png");
+}
+.game {
+	height:500px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	position:relative;
+}
+.gameimg {
+	position:absolute;
+}
+#fox {
+	width:80px;
+    height:80px;
+	left:50px;
+}
+.endingfox {
+	animation-name:animation;
+	animation-duration:6s;
+}
+@keyframes animation{
+	0%{ left:50px; }
+	65%{ left:660px; top:210px; }
+	75%{ left:660px; top:190px; }
+	85%{ left:660px; top:210px; }
+	93%{ left:660px; top:190px; }
+	100%{ left:660px; top:210px; }
+}
+#house{
+	width:100px;
+    height:100px;
+	left:660px;
+}
+.gameInfoImg {
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+.gameTable td {
+	width:45px;
+	height:45px;
+	border:4px solid #2D0400;
+}
+.rootTable {
+	position:absolute;
+	z-index:-1;
+}
+.rootTable td{
+	width:45px;
+	height:45px;
+	border:4px solid #2D0400;
+}
+.game-buttons {
+	height:100px;
+	text-align: center;
+}
+.btns {
+	width:100px;
+	height:50px;
+	border:1px solid;
+	border-radius:10px;
+	margin:0 10px;
+	background-color:#ECEBFF;	
+	box-shadow: 0 2px 0 #002654, 2px 4px 6px #002654;
+}
+.btns:active {
+	background-color:gray;
+	box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2), 1px 1px 2px rgba(255, 255, 255, 0.1);
+}
+.showscore {
+	color:black;
+	border:1px solid black;
+	cursor: default;
+}
